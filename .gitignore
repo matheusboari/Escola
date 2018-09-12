@@ -73,7 +73,6 @@ fabric.properties
 # Log files (if you are creating logs in debug mode, uncomment this)
 # *.logs
 ### Laravel template
-vendor/
 node_modules/
 npm-debug.log
 
