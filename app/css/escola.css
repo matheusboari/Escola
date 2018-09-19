@@ -3,3 +3,28 @@
     background-repeat: no-repeat;
 	background-size: cover;
 }
+.back-registro {
+    background: url('http://escola.local/app/img/background.jpg');
+    background-repeat: no-repeat;
+	background-size: cover;
+}
+.registro-box {
+    margin-top: 5% auto;
+}
+
+.registro-box-body {
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.8);
+    background: rgba(255,255,255, 0.9);
+    color: #666666 !important;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+.registro-titulo {
+    font-weight: 100;
+    font-size: 30px;
+}
+.registro-linha {
+    max-width: 100px;
+    border-width:3px;
+    border-color: #a25148;
+}
