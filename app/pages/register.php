@@ -44,6 +44,25 @@
 
                 <hr class="registro-linha">
 
+                <div class="row" style="text-align: center">
+                    <p class="registro-subtitulo">
+                        Forneça os dados solicitados
+                    </p>
+                </div>
+
+                <!-- Formulário que solicita os dados do usuário -->
+                <form action="cadastra_usuario.php" method="post" autocomplete="off">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="input-nome_usuario">
+                            <span class="fas fa-user"></span>
+                        </span>
+                        <input autocomplete="off" type="text" class="form-control"
+                            name="nome_usuario" required placeholder="Nome do usuário"
+                            aria-describedby="input-usuario">
+                    </div>
+
+                </form>
+
             </div>
         </div>
 

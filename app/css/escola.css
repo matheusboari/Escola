@@ -18,13 +18,22 @@
     color: #666666 !important;
     margin-left: 350px;
     margin-right: 350px;
+    margin-top: 90px;
+    padding: 20px 50px 20px 50px;
 }
 .registro-titulo {
-    font-weight: 100;
+    font-family: Pacifico;
+    font-weight: 600;
     font-size: 30px;
 }
 .registro-linha {
     max-width: 100px;
     border-width:3px;
     border-color: #a25148;
+}
+
+.registro-subtitulo {
+    font-family: Anton;
+    font-weight: 400;
+    font-size: 22px;
 }
