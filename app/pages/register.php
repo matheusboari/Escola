@@ -1,3 +1,7 @@
+<?php
+    $config = parse_ini_file("../../config.ini");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,10 +10,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>
-            Gestão Escolar
+            <?php echo $config["APP_NAME"]; ?>
         </title>
 
-        <?php include_once('css.inc.php');  ?>
+        <?php include_once("css.inc.php");  ?>
     </head>
 
     <body class="back-registro">
@@ -23,22 +27,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
-                        Gestão Escolar
+                    <a class="navbar-brand" href="<?php echo $config["APP_URL"]; ?>">
+                        <?php echo $config["APP_NAME"]; ?>
                     </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="app/pages/login.php"><i class="fa fa-sign-in-alt"></i> Login</a></li>
-                        <li><a href="app/pages/register.php">Registrar-se</a></li>
+                        <li><a href="<?php echo $config["APP_URL"]; ?>/app/pages/login.php"><i class="fa fa-sign-in-alt"></i> Login</a></li>
+                        <li><a href="<?php echo $config["APP_URL"]; ?>/app/pages/register.php">Registrar-se</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
 
-        <html class="registro-box">
+        <div class="registro-box">
             <div class="registro-box-body">
                 <div class="row" style="text-align: center">
                     <span class="registro-titulo">
@@ -56,11 +60,41 @@
 
                 <!-- Formulário que solicita os dados do usuário -->
                 <form action="cadastra_usuario.php" method="post" autocomplete="off">
+                    <!-- Nome do Usuário -->
                     <div class="input-group">
                         <span class="input-group-addon" id="input-nome_usuario">
                             <span class="fas fa-user"></span>
                         </span>
                         <input autocomplete="off" type="text" class="form-control" name="nome_usuario" required placeholder="Nome do usuário" aria-describedby="input-usuario">
+                    </div>
+                    <br/>
+
+                    <!-- E-mail do Usuário -->
+                    <div class="input-group">
+                        <span class="input-group-addon" id="input-email_usuario">
+                            <span class="fas fa-at"></span>
+                        </span>
+                        <input autocomplete="off" type="email" class="form-control" name="email_usuario" required placeholder="E-mail do usuário" aria-describedby="input-email">
+                    </div>
+                    <br/>
+
+                    <!-- Senha do Usuário -->
+                    <div class="input-group">
+                        <span class="input-group-addon" id="input-senha_usuario">
+                            <span class="fas fa-key"></span>
+                        </span>
+                        <input autocomplete="off" type="password" class="form-control" name="senha_usuario" required placeholder="Senha do usuário" aria-describedby="input-senha">
+                    </div>
+                    <br/>
+
+                    <!-- Botão de envio -->
+                    <div class="row" style="margin-bottom:10px">
+                        <div class="col-xs-12">
+                            <button type="submit" 
+                                class="btn btn-primary btn-block btn-flat">
+                                <span class="fas fa-lock"> Enviar</span>
+                            </button>
+                        </div>
                     </div>
 
                 </form>
@@ -71,4 +105,4 @@
             <?php include_once('javascript.inc.php'); ?>
     </body>
 
-</html>
+</div>
