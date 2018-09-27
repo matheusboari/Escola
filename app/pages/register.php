@@ -1,5 +1,5 @@
 <?php
-    $config = parse_ini_file("../../config.ini");
+    $config = parse_ini_file('../../config.ini');
 ?>
 
 <!DOCTYPE html>
@@ -10,10 +10,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>
-            <?php echo $config["APP_NAME"]; ?>
+            <?php echo $config['APP_NAME']; ?>
         </title>
 
-        <?php include_once("css.inc.php");  ?>
+        <?php include_once 'css.inc.php'; ?>
     </head>
 
     <body class="back-registro">
@@ -27,16 +27,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo $config["APP_URL"]; ?>">
-                        <?php echo $config["APP_NAME"]; ?>
+                    <a class="navbar-brand" href="<?php echo $config['APP_URL']; ?>">
+                        <?php echo $config['APP_NAME']; ?>
                     </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="<?php echo $config["APP_URL"]; ?>/app/pages/login.php"><i class="fa fa-sign-in-alt"></i> Login</a></li>
-                        <li><a href="<?php echo $config["APP_URL"]; ?>/app/pages/register.php">Registrar-se</a></li>
+                        <li><a href="<?php echo $config['APP_URL']; ?>/app/pages/login.php"><i class="fa fa-sign-in-alt"></i> Login</a></li>
+                        <li><a href="<?php echo $config['APP_URL']; ?>/app/pages/register.php">Registrar-se</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -102,7 +102,7 @@
             </div>
             </div>
 
-            <?php include_once('javascript.inc.php'); ?>
+            <?php include_once 'javascript.inc.php'; ?>
     </body>
 
 </div>

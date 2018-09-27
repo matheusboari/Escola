@@ -1,5 +1,5 @@
 <?php
-    $config = parse_ini_file("config.ini");
+    $config = parse_ini_file('config.ini');
 ?>
 
 <!DOCTYPE html>
@@ -10,10 +10,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <?php include_once("app/pages/css.inc.php"); ?>
+        <?php include_once 'app/pages/css.inc.php'; ?>
 
         <title>
-            <?PHP echo $config["APP_NAME"]; ?>
+            <?php echo $config['APP_NAME']; ?>
         </title>
     </head>
 
@@ -28,9 +28,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo $config["APP_URL"]; ?>">
+                    <a class="navbar-brand" href="<?php echo $config['APP_URL']; ?>">
                         <i class="fa fa-graduation-cap"></i>
-                        <?PHP echo $config["APP_NAME"]; ?>
+                        <?php echo $config['APP_NAME']; ?>
                     </a>
                 </div>
 
@@ -38,12 +38,12 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="<?php echo $config["APP_URL"]; ?>/app/pages/login.php">
+                            <a href="<?php echo $config['APP_URL']; ?>/app/pages/login.php">
                                 <i class="fa fa-sign-in-alt"></i> Login
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo $config["APP_URL"]; ?>/app/pages/register.php">
+                            <a href="<?php echo $config['APP_URL']; ?>/app/pages/register.php">
                                 <i class="fa fa-user-plus"></i> Registrar-se
                             </a>
                         </li>
@@ -52,6 +52,6 @@
             </div><!-- /.container-fluid -->
         </nav>
 
-        <?php include_once("app/pages/javascript.inc.php"); ?>
+        <?php include_once 'app/pages/javascript.inc.php'; ?>
     </body>
 </html>
