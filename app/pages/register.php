@@ -5,7 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Gestão Escolar</title>
+        <title>
+            Gestão Escolar
+        </title>
 
         <?php include_once('css.inc.php');  ?>
     </head>
@@ -21,7 +23,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Gestão Escolar</a>
+                    <a class="navbar-brand" href="#">
+                        Gestão Escolar
+                    </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,17 +60,15 @@
                         <span class="input-group-addon" id="input-nome_usuario">
                             <span class="fas fa-user"></span>
                         </span>
-                        <input autocomplete="off" type="text" class="form-control"
-                            name="nome_usuario" required placeholder="Nome do usuário"
-                            aria-describedby="input-usuario">
+                        <input autocomplete="off" type="text" class="form-control" name="nome_usuario" required placeholder="Nome do usuário" aria-describedby="input-usuario">
                     </div>
 
                 </form>
 
             </div>
-        </div>
+            </div>
 
-        <?php include_once('javascript.inc.php'); ?>
+            <?php include_once('javascript.inc.php'); ?>
     </body>
 
 </html>

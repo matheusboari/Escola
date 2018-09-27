@@ -1,3 +1,7 @@
+<?php
+    $config = parse_ini_file("config.ini");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,7 +12,9 @@
 
         <?php include_once("app/pages/css.inc.php"); ?>
 
-        <title>Gestão de Escolas</title>
+        <title>
+            <?PHP echo $config["APP_NAME"]; ?>
+        </title>
     </head>
 
     <body class="back">
@@ -22,14 +28,25 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Gestão Escolar</a>
+                    <a class="navbar-brand" href="<?php echo $config["APP_URL"]; ?>">
+                        <i class="fa fa-graduation-cap"></i>
+                        <?PHP echo $config["APP_NAME"]; ?>
+                    </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="app/pages/login.php"><i class="fa fa-sign-in-alt"></i> Login</a></li>
-                        <li><a href="app/pages/register.php">Registrar-se</a></li>
+                        <li>
+                            <a href="<?php echo $config["APP_URL"]; ?>/app/pages/login.php">
+                                <i class="fa fa-sign-in-alt"></i> Login
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $config["APP_URL"]; ?>/app/pages/register.php">
+                                <i class="fa fa-user-plus"></i> Registrar-se
+                            </a>
+                        </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -37,5 +54,4 @@
 
         <?php include_once("app/pages/javascript.inc.php"); ?>
     </body>
-
 </html>
