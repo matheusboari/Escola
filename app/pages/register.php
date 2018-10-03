@@ -21,11 +21,15 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+
                     </button>
                     <a class="navbar-brand" href="<?php echo $config['APP_URL']; ?>">
                         <?php echo $config['APP_NAME']; ?>
@@ -35,8 +39,16 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="<?php echo $config['APP_URL']; ?>/app/pages/login.php"><i class="fa fa-sign-in-alt"></i> Login</a></li>
-                        <li><a href="<?php echo $config['APP_URL']; ?>/app/pages/register.php">Registrar-se</a></li>
+                        <li>
+                            <a href="<?php echo $config['APP_URL']; ?>/app/pages/login.php">
+                                <i class="fa fa-sign-in-alt"></i> Login
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $config['APP_URL']; ?>/app/pages/register.php">
+                                Registrar-se
+                            </a>
+                        </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -65,7 +77,9 @@
                         <span class="input-group-addon" id="input-nome_usuario">
                             <span class="fas fa-user"></span>
                         </span>
-                        <input autocomplete="off" type="text" class="form-control" name="nome_usuario" required placeholder="Nome do usuário" aria-describedby="input-usuario">
+                        <input autocomplete="off" type="text" class="form-control"
+                            name="nome_usuario" required placeholder="Nome do usuário"
+                            aria-describedby="input-usuario">
                     </div>
                     <br/>
 
@@ -74,7 +88,9 @@
                         <span class="input-group-addon" id="input-email_usuario">
                             <span class="fas fa-at"></span>
                         </span>
-                        <input autocomplete="off" type="email" class="form-control" name="email_usuario" required placeholder="E-mail do usuário" aria-describedby="input-email">
+                        <input autocomplete="off" type="email" class="form-control"
+                            name="email_usuario" required placeholder="E-mail do usuário"
+                            aria-describedby="input-email">
                     </div>
                     <br/>
 
@@ -83,14 +99,16 @@
                         <span class="input-group-addon" id="input-senha_usuario">
                             <span class="fas fa-key"></span>
                         </span>
-                        <input autocomplete="off" type="password" class="form-control" name="senha_usuario" required placeholder="Senha do usuário" aria-describedby="input-senha">
+                        <input autocomplete="off" type="password" class="form-control"
+                            name="senha_usuario" required placeholder="Senha do usuário"
+                            aria-describedby="input-senha">
                     </div>
                     <br/>
 
                     <!-- Botão de envio -->
                     <div class="row" style="margin-bottom:10px">
                         <div class="col-xs-12">
-                            <button type="submit" 
+                            <button type="submit"
                                 class="btn btn-primary btn-block btn-flat">
                                 <span class="fas fa-lock"> Enviar</span>
                             </button>
