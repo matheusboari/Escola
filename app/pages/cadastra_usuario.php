@@ -29,14 +29,13 @@ $resposta = $db->query($sql);
 
 if ($resposta != true) {
     echo "<h2>Erro de inserção na tabela de usuários.</h2><br>";
-	echo "<html>
+    echo "<html>
 		<head>
 			<META HTTP-EQUIV=\"refresh\" CONTENT=\"10; URL=" . $config['APP_URL'] . "/app/pages/register.php\">
 		</head>
 	</html>";
-
 } else {
-	echo "<html>
+    echo "<html>
 		<head>
 			<META HTTP-EQUIV=\"refresh\" CONTENT=\"1; URL=" . $config['APP_URL'] . "\">
 		</head>
@@ -44,4 +43,3 @@ if ($resposta != true) {
 }
 
 $db->close();
-?>
