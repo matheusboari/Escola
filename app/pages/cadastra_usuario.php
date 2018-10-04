@@ -22,26 +22,26 @@ if ($db->connect_errno) {
     echo "Mensagem: (" . $db->connect_errno . ") " . $db->connect_error;
 }
 
-$sql = "insert into usuario (nome_usuario, email, senha)
+$sql = "insert into usuarios (nome_usuario, email, senha)
 	    values ('$nome_usuario', '$email', '$senha');";
 
 $resposta = $db->query($sql);
 
 if ($resposta != true) {
     echo "<h2>Erro de inserção na tabela de usuários.</h2><br>";
-    echo "<html>
+	echo "<html>
 		<head>
-			<META HTTP-EQUIV=\"refresh\"
-			CONTENT=\"5; URL=". $config['APP_URL'] . "/app/pages/register.php\">
+			<META HTTP-EQUIV=\"refresh\" CONTENT=\"10; URL=" . $config['APP_URL'] . "/app/pages/register.php\">
 		</head>
 	</html>";
+
 } else {
-    echo "<html>
+	echo "<html>
 		<head>
-			<META HTTP-EQUIV=\"refresh\"
-			CONTENT=\"0; URL=" . $config['APP_URL'] . "\">
+			<META HTTP-EQUIV=\"refresh\" CONTENT=\"1; URL=" . $config['APP_URL'] . "\">
 		</head>
 	</html>";
 }
 
 $db->close();
+?>
