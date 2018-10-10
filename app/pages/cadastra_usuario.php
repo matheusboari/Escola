@@ -18,8 +18,19 @@ $db = new mysqli(
 );
 
 if ($db->connect_errno) {
-    echo "Erro de acesso ao MySQL.<br>";
-    echo "Mensagem: (" . $db->connect_errno . ") " . $db->connect_error;
+    $msg ="Erro de acesso ao MySQL. (" . $db->connect_errno . ") " . $db->connect_error;
+    echo "
+        <html>
+        <head>
+        <META HTTP-EQUIV=\"refresh\" CONTENT=\"0; URL=" .
+            $config['APP_URL'] . "/app/pages/register.php\">
+        </head>
+        <body>
+            <script>
+                alert('" . $msg . ".');
+            </script>
+        </body>
+	</html>";
 }
 
 $sql = "insert into usuarios (nome_usuario, email, senha)
@@ -28,11 +39,15 @@ $sql = "insert into usuarios (nome_usuario, email, senha)
 $resposta = $db->query($sql);
 
 if ($resposta != true) {
-    echo "<h2>Erro de inserção na tabela de usuários.</h2><br>";
     echo "<html>
 		<head>
-			<META HTTP-EQUIV=\"refresh\" CONTENT=\"10; URL=" . $config['APP_URL'] . "/app/pages/register.php\">
-		</head>
+			<META HTTP-EQUIV=\"refresh\" CONTENT=\"0; URL=" . $config['APP_URL'] . "/app/pages/register.php\">
+        </head>
+        <body>
+            <script>
+                alert('Não foi possível cadastrar o usuário. Tente novamente.');
+            </script>
+        </body>
 	</html>";
 } else {
     echo "<html>
