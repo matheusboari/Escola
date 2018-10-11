@@ -33,6 +33,11 @@ $sql = "select * from usuarios where email='$email' and senha='$senha'";
 $resposta = $db->query($sql);
 
 if (mysqli_num_rows($resposta) == 1) {
+    $registro = mysqli_fetch_array($resposta);
+
+    session_start();
+    $_SESSION["nome_usuario"] = $registro["nome_usuario"];
+
     echo "<html>
 		<head>
             <META HTTP-EQUIV=\"refresh\" CONTENT=\"0; URL=" .
