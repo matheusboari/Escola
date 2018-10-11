@@ -100,7 +100,7 @@ $config = parse_ini_file('../../config.ini');
                         <div class="col-xs-12">
                             <button type="submit"
                                 class="btn btn-primary btn-block btn-flat">
-                                <span class="fas fa-lock"> Enviar</span>
+                                <span class="fas fa-lock"> Acessar</span>
                             </button>
                         </div>
                     </div>
